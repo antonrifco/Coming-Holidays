@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.antonrifco.comingholidays"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="3" 
+          android:targetSdkVersion="13"
+          android:maxSdkVersion="13" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+  	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name="net.antonrifco.comingholidays.ComingHolidaysActivity" 
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="net.antonrifco.comingholidays.HolidayAlarmService" />
+        <activity android:name="net.antonrifco.comingholidays.AddEditLeaveActivity"
+            android:label="@string/title_addEditLeave"
+      		/>
+        <activity android:name="net.antonrifco.comingholidays.HolidaysIntro"
+            android:label="@string/title_holidaysIntro"
+      		/>
+        <activity android:name="com.google.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+    </application>
+
+</manifest>
